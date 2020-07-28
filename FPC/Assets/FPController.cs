@@ -6,6 +6,7 @@ public class FPController : MonoBehaviour
 {
     public GameObject cam;
     public Animator anim;
+    //public AudioSource shot;
     float speed = 0.1f;
     float Xsensitivity = 4;
     float Ysensitivity = 4;
@@ -41,7 +42,10 @@ public class FPController : MonoBehaviour
             anim.SetBool("arm", !anim.GetBool("arm"));
 
         if (Input.GetMouseButtonDown(0))
+        {
             anim.SetTrigger("fire");
+            //shot.Play();
+        }
 
         if (Input.GetKeyDown(KeyCode.R))
             anim.SetTrigger("reload");
