@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 963194225}
+  anim: {fileID: 1788329222}
 --- !u!54 &236295041
 Rigidbody:
   m_ObjectHideFlags: 0
