@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class FPController : MonoBehaviour
 {
+    // public AudioSource shot;
     public GameObject cam;
     public Animator anim;
-    //public AudioSource shot;
+    public AudioSource[] footsteps;
+    public AudioSource jump;
+    public AudioSource land;
     float speed = 0.1f;
     float Xsensitivity = 4;
     float Ysensitivity = 4;
@@ -44,7 +47,7 @@ public class FPController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             anim.SetTrigger("fire");
-            //shot.Play();
+            // shot.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -53,12 +56,39 @@ public class FPController : MonoBehaviour
         if (Mathf.Abs(x) > 0 || Mathf.Abs(z) > 0)
         {
             if (!anim.GetBool("walking"))
-            anim.SetBool("walking", true);
+            {
+                anim.SetBool("walking", true);
+                InvokeRepeating("PlayFootStepAudio", 0, 0.4f);
+            }
         }
         else if (anim.GetBool("walking"))
+        {
             anim.SetBool("walking", false);
+            CancelInvoke("PlayFootStepAudio");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
+            rb.AddForce(0, 300, 0);
+            jump.Play();
+            if (anim.GetBool("walking"))
+                CancelInvoke("PlayFootStepAudio");
+
+        }
 
     }
+
+    void PlayFootStepAudio()
+    {
+        AudioSource audioSource = new AudioSource();
+        int n = Random.Range(1, footsteps.Length);
+
+        audioSource = footsteps[n];
+        audioSource.Play();
+        footsteps[n] = footsteps[0];
+        footsteps[0] = audioSource;
+    }
+
     void FixedUpdate()
     {
         float yRot = Input.GetAxis("Mouse X") * Ysensitivity;
@@ -72,9 +102,8 @@ public class FPController : MonoBehaviour
         this.transform.localRotation = characterRot;
         cam.transform.localRotation = cameraRot;
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-            rb.AddForce(0, 300, 0);
 
+            
         x = Input.GetAxis("Horizontal") * speed;
         z = Input.GetAxis("Vertical") * speed;
         transform.position += cam.transform.forward * z + cam.transform.right * x;//new Vector3(x * speed, 0, z * speed);
@@ -105,6 +134,17 @@ public class FPController : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (IsGrounded())
+        {
+            land.Play();
+            if (anim.GetBool("walking"))
+                InvokeRepeating("PlayFootStepAudio", 0, 0.4f);
+        }
+            
     }
 
     public void SetCursorLock(bool value)
