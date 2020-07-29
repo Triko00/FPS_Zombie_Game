@@ -10,6 +10,8 @@ public class FPController : MonoBehaviour
     public AudioSource[] footsteps;
     public AudioSource jump;
     public AudioSource land;
+    public AudioSource ammoPickup;
+    public AudioSource healthPickup;
     float speed = 0.1f;
     float Xsensitivity = 4;
     float Ysensitivity = 4;
@@ -140,6 +142,19 @@ public class FPController : MonoBehaviour
     {
         if (IsGrounded())
         {
+            if (col.gameObject.tag == "Ammo")
+            {
+                Debug.Log("Ammo");
+                Destroy(col.gameObject);
+                ammoPickup.Play();
+            }
+
+            else if (col.gameObject.tag == "MedKit")
+            {
+                Debug.Log("MedKit");
+                Destroy(col.gameObject);
+                healthPickup.Play();
+            }
             land.Play();
             if (anim.GetBool("walking"))
                 InvokeRepeating("PlayFootStepAudio", 0, 0.4f);
