@@ -14,6 +14,7 @@ public class FPController : MonoBehaviour
     public AudioSource healthPickup;
     public AudioSource triggerSound;
     public AudioSource deathSound;
+    public AudioSource reloadSound;
 
     float speed = 0.1f;
     float Xsensitivity = 4;
@@ -29,6 +30,11 @@ public class FPController : MonoBehaviour
     int maxAmmo = 50;
     int health = 0;
     int maxHealth = 100;
+    int ammoClip = 0;
+    int ammoClipMax = 10;
+
+    bool playingWalking = false;
+    bool previouslyGrounded = true;
 
     bool cursorIsLocked = true;
     bool lockCursor = true;
@@ -59,19 +65,28 @@ public class FPController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (ammo > 0)
+            if (ammoClip > 0)
             {
                 anim.SetTrigger("fire");
-                ammo--;
+                ammoClip--;
             }
             else if (anim.GetBool("arm"))
                 triggerSound.Play();
 
-            Debug.Log("Ammo Left: " + ammo);
+            Debug.Log("Ammo Left in Clip: " + ammoClip);
         }
-                                                        
-        if (Input.GetKeyDown(KeyCode.R))
+
+        if (Input.GetKeyDown(KeyCode.R) && anim.GetBool("arm"))
+        {
             anim.SetTrigger("reload");
+            reloadSound.Play();
+            int amountNeeded = ammoClipMax - ammoClip;
+            int ammoAvailable = amountNeeded < ammo ? amountNeeded : ammo;
+            ammo -= ammoAvailable;
+            ammoClip += ammoAvailable;
+            Debug.Log("Ammo Left: " + ammo);
+            Debug.Log("Ammo in Clip: " + ammoClip);
+        }
 
         if (Mathf.Abs(x) > 0 || Mathf.Abs(z) > 0)
         {
@@ -85,16 +100,28 @@ public class FPController : MonoBehaviour
         {
             anim.SetBool("walking", false);
             CancelInvoke("PlayFootStepAudio");
+            playingWalking = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        bool grounded = IsGrounded();
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             rb.AddForce(0, 300, 0);
             jump.Play();
             if (anim.GetBool("walking"))
+            {
                 CancelInvoke("PlayFootStepAudio");
+                playingWalking = false;
+            }
 
         }
+        else if (!previouslyGrounded && grounded)
+        {
+            land.Play();
+        }
+
+
+        previouslyGrounded = grounded;
 
     }
 
@@ -107,6 +134,7 @@ public class FPController : MonoBehaviour
         audioSource.Play();
         footsteps[n] = footsteps[0];
         footsteps[0] = audioSource;
+        playingWalking = true;
     }
 
     void FixedUpdate()
@@ -182,8 +210,8 @@ public class FPController : MonoBehaviour
             Destroy(col.gameObject);
             healthPickup.Play();
         }
-            land.Play();
-            if (anim.GetBool("walking"))
+        else if (IsGrounded())
+            if (anim.GetBool("walking") && !playingWalking)
                 InvokeRepeating("PlayFootStepAudio", 0, 0.4f);
         }
             
