@@ -21,6 +21,12 @@ public class FPController : MonoBehaviour
     float x = 0;
     float z = 0;
 
+    // Inventory
+    int ammo = 0;
+    int maxAmmo = 50;
+    int health = 0;
+    int maxHealth = 100;
+
     bool cursorIsLocked = true;
     bool lockCursor = true;
 
@@ -38,6 +44,8 @@ public class FPController : MonoBehaviour
 
         cameraRot = cam.transform.localRotation;
         characterRot = this.transform.localRotation;
+
+        // health = maxHealth;
     }
 
     // Update is called once per frame
@@ -142,16 +150,18 @@ public class FPController : MonoBehaviour
     {
         if (IsGrounded())
         {
-            if (col.gameObject.tag == "Ammo")
+            if (col.gameObject.tag == "Ammo" && ammo < maxAmmo)
             {
-                Debug.Log("Ammo");
+                ammo = Mathf.Clamp(ammo + 10, 0, maxAmmo);
+                Debug.Log("Ammo: " + ammo );
                 Destroy(col.gameObject);
                 ammoPickup.Play();
             }
 
-            else if (col.gameObject.tag == "MedKit")
+            else if (col.gameObject.tag == "MedKit" && health < maxHealth)
             {
-                Debug.Log("MedKit");
+                health = Mathf.Clamp(health + 25, 0, maxHealth);
+                Debug.Log("MedKit: " + health );
                 Destroy(col.gameObject);
                 healthPickup.Play();
             }
