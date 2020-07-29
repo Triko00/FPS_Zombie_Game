@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ammo
   - MedKit
+  - Lava
   layers:
   - Default
   - TransparentFX

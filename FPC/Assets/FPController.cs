@@ -12,6 +12,9 @@ public class FPController : MonoBehaviour
     public AudioSource land;
     public AudioSource ammoPickup;
     public AudioSource healthPickup;
+    public AudioSource triggerSound;
+    public AudioSource deathSound;
+
     float speed = 0.1f;
     float Xsensitivity = 4;
     float Ysensitivity = 4;
@@ -45,7 +48,7 @@ public class FPController : MonoBehaviour
         cameraRot = cam.transform.localRotation;
         characterRot = this.transform.localRotation;
 
-        // health = maxHealth;
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -56,10 +59,17 @@ public class FPController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            anim.SetTrigger("fire");
-            //shot.Play();
-        }
+            if (ammo > 0)
+            {
+                anim.SetTrigger("fire");
+                ammo--;
+            }
+            else if (anim.GetBool("arm"))
+                triggerSound.Play();
 
+            Debug.Log("Ammo Left: " + ammo);
+        }
+                                                        
         if (Input.GetKeyDown(KeyCode.R))
             anim.SetTrigger("reload");
 
@@ -153,18 +163,25 @@ public class FPController : MonoBehaviour
             if (col.gameObject.tag == "Ammo" && ammo < maxAmmo)
             {
                 ammo = Mathf.Clamp(ammo + 10, 0, maxAmmo);
-                Debug.Log("Ammo: " + ammo );
+                Debug.Log("Ammo: " + ammo);
                 Destroy(col.gameObject);
                 ammoPickup.Play();
             }
-
-            else if (col.gameObject.tag == "MedKit" && health < maxHealth)
+            else if (col.gameObject.tag == "Lava")
             {
-                health = Mathf.Clamp(health + 25, 0, maxHealth);
-                Debug.Log("MedKit: " + health );
-                Destroy(col.gameObject);
-                healthPickup.Play();
+                health = Mathf.Clamp(health - 50, 0, maxHealth);
+                Debug.Log("Health Level:" + health);
+                if (health <= 0)
+                    deathSound.Play();
             }
+            
+        else if (col.gameObject.tag == "MedKit" && health < maxHealth)
+        {
+            health = Mathf.Clamp(health + 25, 0, maxHealth);
+            Debug.Log("MedKit: " + health);
+            Destroy(col.gameObject);
+            healthPickup.Play();
+        }
             land.Play();
             if (anim.GetBool("walking"))
                 InvokeRepeating("PlayFootStepAudio", 0, 0.4f);
