@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FPController : MonoBehaviour
 {
-    // public AudioSource shot;
+    //public AudioSource shot;
     public GameObject cam;
     public Animator anim;
     public AudioSource[] footsteps;
@@ -57,7 +57,7 @@ public class FPController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             anim.SetTrigger("fire");
-            // shot.Play();
+            //shot.Play();
         }
 
         if (Input.GetKeyDown(KeyCode.R))

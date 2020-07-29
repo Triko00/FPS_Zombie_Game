@@ -22950,8 +22950,7 @@ AnimationClip:
   - time: 0.06666667
     functionName: Fire
     data: 
-    objectReferenceParameter: {fileID: 8300000, guid: d719e715a205bc94496edd1d7d62b510,
-      type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
