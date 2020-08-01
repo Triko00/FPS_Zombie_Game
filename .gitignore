@@ -3,3 +3,6 @@ Zombies/Library/PackageCache/
 Zombies/Temp/
 Zombies/Library/ShaderCache/
 Zombies/Assets/Zombies/**/*.fbx
+Zombies_48/Assets/Zombies/**/*.fbx
+Zombies_48/Assets/Terrain/**/*.tif
+Zombies_48/Assets/GameLevel/NavMesh.asset
