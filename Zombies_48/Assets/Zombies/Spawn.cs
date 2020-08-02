@@ -8,8 +8,15 @@ public class Spawn : MonoBehaviour
     public GameObject zombiePrefab;
     public int number;
     public float spawnRadius;
+    public bool SpawnOnStart = true;
     // Start is called before the first frame update
     void Start()
+    {
+        if (SpawnOnStart)
+            SpawnAll();
+    }
+
+    void SpawnAll()
     {
         for (int i = 0; i < number; i++)
         {
@@ -25,6 +32,12 @@ public class Spawn : MonoBehaviour
 
 
         }
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (!SpawnOnStart && collider.gameObject.tag == "Player")
+            SpawnAll();
     }
 
 }
