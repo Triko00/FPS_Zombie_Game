@@ -7462,6 +7462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1127954337}
+  walkingSpeed: 0.8
+  runningSpeed: 1.6
 --- !u!195 &839711692
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7571,6 +7573,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1127954337}
+  walkingSpeed: 1
+  runningSpeed: 2
 --- !u!195 &849814238
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -11475,6 +11479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1127954337}
+  walkingSpeed: 1
+  runningSpeed: 2
 --- !u!195 &1331053316
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13416,6 +13422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1127954337}
+  walkingSpeed: 0.3
+  runningSpeed: 0.3
 --- !u!195 &1549816911
 NavMeshAgent:
   m_ObjectHideFlags: 0

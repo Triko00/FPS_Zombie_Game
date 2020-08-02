@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class ZombieController : MonoBehaviour
 {
     public GameObject target;
+    public float walkingSpeed;
+    public float runningSpeed;
     Animator anim;
     NavMeshAgent agent;
 
@@ -57,7 +59,7 @@ public class ZombieController : MonoBehaviour
         {
             case STATE.IDLE:
                 if (CanSeePlayer()) state = STATE.CHASE;
-                else
+                else if (Random.Range(0, 5000) < 5)
                     state = STATE.WANDER;
                 break;
             case STATE.WANDER:
@@ -70,6 +72,7 @@ public class ZombieController : MonoBehaviour
                     agent.SetDestination(dest);
                     agent.stoppingDistance = 0;
                     TurnOffTriggers();
+                    agent.speed = walkingSpeed;
                     anim.SetBool("isWalking", true);
 
                     /* debug
@@ -80,14 +83,19 @@ public class ZombieController : MonoBehaviour
                         Debug.Log("name = " + this.transform.name + " agentDestX = " + agentDest.x + " agentDestY = " + agentDest.y + " agentDestZ = " + agentDest.z);
                     }*/
                 }
-
                 if (CanSeePlayer()) state = STATE.CHASE;
-
+                else if (Random.Range(0, 5000) < 5)
+                {
+                    state = STATE.IDLE;
+                    TurnOffTriggers();
+                    agent.ResetPath();
+                }
                 break;
             case STATE.CHASE:
                 agent.SetDestination(target.transform.position);
                 agent.stoppingDistance = 5;
                 TurnOffTriggers();
+                agent.speed = runningSpeed;
                 anim.SetBool("isRunning", true);
 
                 if (agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending)
@@ -106,7 +114,7 @@ public class ZombieController : MonoBehaviour
                 TurnOffTriggers();
                 anim.SetBool("isAttacking", true);
                 this.transform.LookAt(target.transform.position);
-                if (DistanceToPlayer() > agent.stoppingDistance)
+                if (DistanceToPlayer() > agent.stoppingDistance + 2)
                     state = STATE.CHASE;
                 break;
             case STATE.DEAD:
