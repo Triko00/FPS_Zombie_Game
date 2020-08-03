@@ -56,9 +56,27 @@ public class FPController : MonoBehaviour
 
     void ProcessZombieHit()
     {
-
+        RaycastHit hitInfo;
+        if(Physics.Raycast(shotDirection.position, shotDirection.forward, out hitInfo, 200))
+        {
+            GameObject hitZombie = hitInfo.collider.gameObject;
+            if(hitZombie.tag == "Zombie")
+            {
+                if (Random.Range(0, 10) < 5)
+                {
+                    GameObject rdPrefab = hitZombie.GetComponent<ZombieController>().ragdoll;
+                    GameObject newRD = Instantiate(rdPrefab, hitZombie.transform.position, hitZombie.transform.rotation);
+                    newRD.transform.Find("Hips").GetComponent<Rigidbody>().AddForce(shotDirection.forward * 10000);
+                    Destroy(hitZombie);
+                }
+                else
+                {
+                    hitZombie.GetComponent<ZombieController>().KillZombie();
+                }
+            }
+        }
     }
-
+    
     // Update is called once per frame
     void Update()
     {

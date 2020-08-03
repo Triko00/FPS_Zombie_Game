@@ -52,10 +52,17 @@ public class ZombieController : MonoBehaviour
         return false;
     }
 
+    public void KillZombie()
+    {
+        TurnOffTriggers();
+        anim.SetBool("isDead", true);
+        state = STATE.DEAD;
+    }
+     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        /*if (Input.GetKeyDown(KeyCode.P))
         {
             if (Random.Range(0, 10) < 5)
             {
@@ -71,7 +78,7 @@ public class ZombieController : MonoBehaviour
 
             }
             return;
-        }
+        }*/
 
         if (target == null)
         {
