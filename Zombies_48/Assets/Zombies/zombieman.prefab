@@ -1720,9 +1720,10 @@ GameObject:
   - component: {fileID: 4858005932450810756}
   - component: {fileID: 849814237}
   - component: {fileID: 849814238}
+  - component: {fileID: 1728674597}
   m_Layer: 0
   m_Name: zombieman
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1777,6 +1778,7 @@ MonoBehaviour:
   target: {fileID: 0}
   walkingSpeed: 1
   runningSpeed: 2
+  ragdoll: {fileID: 7670871037122326912, guid: 2fce7d2d6b2de364f88e9d7da3e42519, type: 3}
 --- !u!195 &849814238
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1799,6 +1801,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &1728674597
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5176861845160572960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &5215620285009353330
 GameObject:
   m_ObjectHideFlags: 0

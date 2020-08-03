@@ -327,9 +327,10 @@ GameObject:
   - component: {fileID: 3277696249206785949}
   - component: {fileID: 1549816910}
   - component: {fileID: 1549816911}
+  - component: {fileID: 849996434}
   m_Layer: 0
   m_Name: boss
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -384,6 +385,7 @@ MonoBehaviour:
   target: {fileID: 0}
   walkingSpeed: 0.3
   runningSpeed: 0.3
+  ragdoll: {fileID: 5218399450760531785, guid: f1a64b471864cd542ac21369dbe9641d, type: 3}
 --- !u!195 &1549816911
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -406,6 +408,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &849996434
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099347172983380646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.07
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1571866649296816644
 GameObject:
   m_ObjectHideFlags: 0

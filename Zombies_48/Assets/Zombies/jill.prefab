@@ -4425,9 +4425,10 @@ GameObject:
   - component: {fileID: 2986969213742036221}
   - component: {fileID: 839711691}
   - component: {fileID: 839711692}
+  - component: {fileID: 1107795287}
   m_Layer: 0
   m_Name: jill
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4482,6 +4483,7 @@ MonoBehaviour:
   target: {fileID: 0}
   walkingSpeed: 0.8
   runningSpeed: 1.6
+  ragdoll: {fileID: 7296550756406769512, guid: 2203ca75e0a6743449a87fc4ace32645, type: 3}
 --- !u!195 &839711692
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4504,3 +4506,17 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &1107795287
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153167617879130721}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
