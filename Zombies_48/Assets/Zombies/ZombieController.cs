@@ -8,6 +8,7 @@ public class ZombieController : MonoBehaviour
     public GameObject target;
     public float walkingSpeed;
     public float runningSpeed;
+    public float damageAmount = 5;
     public GameObject ragdoll;
     Animator anim;
     NavMeshAgent agent;
@@ -58,7 +59,12 @@ public class ZombieController : MonoBehaviour
         anim.SetBool("isDead", true);
         state = STATE.DEAD;
     }
-     
+    
+    public void DamagePlayer()
+    {
+        target.GetComponent<FPController>().TakeHit(damageAmount);
+    }
+
     // Update is called once per frame
     void Update()
     {

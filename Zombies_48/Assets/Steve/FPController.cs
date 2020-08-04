@@ -35,13 +35,19 @@ public class FPController : MonoBehaviour
     //Inventory
     int ammo = 50;
     int maxAmmo = 50;
-    int health = 0;
+    int health = 100;
     int maxHealth = 100;
     int ammoClip = 10;
     int ammoClipMax = 10;
 
     bool playingWalking = false;
     bool previouslyGrounded = true;
+
+    public void TakeHit(float amount)
+    {
+        health = (int) Mathf.Clamp(health - amount, 0, maxHealth);
+        Debug.Log("Health: " + health);
+    }
 
     // Start is called before the first frame update
     void Start()
