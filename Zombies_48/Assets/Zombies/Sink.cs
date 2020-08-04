@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Sink : MonoBehaviour
 {
+    public float delay = 5;
     float destroyHeight;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if(this.gameObject.tag == "Ragdoll")
+            Invoke("StartSink", 5);
     }
 
     public void StartSink()
@@ -21,7 +23,7 @@ public class Sink : MonoBehaviour
             Destroy(c);
         }
 
-        InvokeRepeating("SinkIntoGround", 5, 0.1f); 
+        InvokeRepeating("SinkIntoGround", delay, 0.1f); 
 
     }
 
