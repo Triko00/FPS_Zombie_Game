@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &74885582
@@ -1054,7 +1054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &74885583
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &158147926
@@ -1585,7 +1585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &158147927
@@ -1959,7 +1959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &185058442
@@ -1976,7 +1976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &185058443
@@ -2734,6 +2734,7 @@ Transform:
   - {fileID: 481951899}
   - {fileID: 230550490}
   - {fileID: 1932363563}
+  - {fileID: 1893434094}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3033,9 +3034,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a341ff0250e3d499b90aa4597fb82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
+  zombiePrefab: {fileID: 1099347172983380646, guid: d5b7cf80f1fab4ea0bd49a0e878214fe,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &295324620
@@ -3052,7 +3053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &295324621
@@ -3469,7 +3470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &309499376
@@ -3486,7 +3487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &309499377
@@ -5266,7 +5267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &526795468
@@ -5283,7 +5284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &526795469
@@ -5498,7 +5499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &529247149
@@ -5515,7 +5516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &529247150
@@ -5872,7 +5873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &560719901
@@ -5889,7 +5890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &560719902
@@ -6098,7 +6099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &572572360
@@ -6115,7 +6116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &572572361
@@ -6616,7 +6617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &615204083
@@ -6633,7 +6634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &615204084
@@ -9121,7 +9122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &848812762
@@ -9138,7 +9139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &848812763
@@ -9778,7 +9779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &895845583
@@ -9795,7 +9796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &895845584
@@ -10010,7 +10011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &918187073
@@ -10027,7 +10028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &918187074
@@ -10317,7 +10318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &939577661
@@ -10334,7 +10335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &939577662
@@ -11783,7 +11784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1075028691
@@ -11800,7 +11801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1075028692
@@ -12694,9 +12695,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a341ff0250e3d499b90aa4597fb82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
+  zombiePrefab: {fileID: 1099347172983380646, guid: d5b7cf80f1fab4ea0bd49a0e878214fe,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1205642343
@@ -12713,7 +12714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1205642344
@@ -13767,7 +13768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1294438319
@@ -13784,7 +13785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1294438320
@@ -14938,7 +14939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1396117596
@@ -14955,7 +14956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1396117597
@@ -15447,7 +15448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 4
+  number: 1
   spawnRadius: 5
   SpawnOnStart: 0
 --- !u!114 &1447369264
@@ -15464,7 +15465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 3
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!23 &1447369265
@@ -15540,9 +15541,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a341ff0250e3d499b90aa4597fb82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 0}
-  number: 0
-  spawnRadius: 0
+  zombiePrefab: {fileID: 8649283112028866171, guid: 7912ec467aa9147a59e49b3925ad126e,
+    type: 3}
+  number: 2
+  spawnRadius: 4
   SpawnOnStart: 0
 --- !u!1001 &1452005682
 PrefabInstance:
@@ -15762,7 +15764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1466034398
@@ -15779,7 +15781,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1466034399
@@ -15975,7 +15977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1467164166
@@ -15992,7 +15994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1467164167
@@ -16556,7 +16558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1536708506
@@ -16573,7 +16575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1536708507
@@ -16703,7 +16705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1540504042
@@ -16720,7 +16722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1540504043
@@ -17709,9 +17711,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a341ff0250e3d499b90aa4597fb82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
+  zombiePrefab: {fileID: 1099347172983380646, guid: d5b7cf80f1fab4ea0bd49a0e878214fe,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1601722938
@@ -17728,7 +17730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1601722939
@@ -17858,7 +17860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1615811733
@@ -17875,7 +17877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1615811734
@@ -18322,7 +18324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1657569929
@@ -18339,7 +18341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1657569930
@@ -19722,7 +19724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1858136932
@@ -19739,7 +19741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &1858136933
@@ -20004,6 +20006,99 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1881573705}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1893434093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893434094}
+  - component: {fileID: 1893434097}
+  - component: {fileID: 1893434096}
+  - component: {fileID: 1893434095}
+  m_Layer: 0
+  m_Name: Home
+  m_TagString: Home
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1893434094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893434093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -849.27, y: 0.45, z: 2.41}
+  m_LocalScale: {x: 7.3228836, y: 7.3228836, z: 7.3228836}
+  m_Children: []
+  m_Father: {fileID: 237553012}
+  m_RootOrder: 95
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1893434095
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893434093}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1893434096
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893434093}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1893434097
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893434093}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1895056290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20990,9 +21085,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a341ff0250e3d499b90aa4597fb82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombiePrefab: {fileID: 8649283112028866171, guid: 7912ec467aa9147a59e49b3925ad126e,
+  zombiePrefab: {fileID: 1099347172983380646, guid: d5b7cf80f1fab4ea0bd49a0e878214fe,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1974815342
@@ -21009,7 +21104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &1974815343
@@ -21371,7 +21466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &2004588531
@@ -21388,7 +21483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &2004588532
@@ -22703,7 +22798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &2117301518
@@ -22720,7 +22815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &2117301519
@@ -22850,7 +22945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 9153167617879130721, guid: b7dd32307aa7f43bf98270b4b8b91c33,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!114 &2119951253
@@ -22867,7 +22962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zombiePrefab: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
     type: 3}
-  number: 2
+  number: 1
   spawnRadius: 4
   SpawnOnStart: 0
 --- !u!135 &2119951254

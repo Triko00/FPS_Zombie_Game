@@ -60,6 +60,20 @@ public class FPController : MonoBehaviour
         }
     }                                   
 
+    void OnTriggerEnter(Collider col)
+    {
+        if( col.gameObject.tag == "Home")
+        {
+            Vector3 pos = new Vector3(this.transform.position.x,
+                                        Terrain.activeTerrain.SampleHeight(this.transform.position),
+                                        this.transform.position.z);
+            GameObject steve = Instantiate(stevePrefab, pos, this.transform.rotation);
+            steve.GetComponent<Animator>().SetTrigger("Dance");
+            GameStats.gameOver = true;
+            Destroy(this.gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

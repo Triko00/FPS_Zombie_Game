@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Zombie
   - Ragdoll
+  - Home
   layers:
   - Default
   - TransparentFX
