@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class ZombieController : MonoBehaviour
 {
     public GameObject target;
+    public AudioSource[] spats;
     public float walkingSpeed;
     public float runningSpeed;
     public float damageAmount = 5;
@@ -59,10 +60,23 @@ public class ZombieController : MonoBehaviour
         anim.SetBool("isDead", true);
         state = STATE.DEAD;
     }
-    
+
+    void PlaySplatAudio()
+    {
+        AudioSource audioSource = new AudioSource();
+        int n = Random.Range(1, spats.Length);
+
+        audioSource = spats[n];
+        audioSource.Play();
+        spats[n] = spats[0];
+        spats[0] = audioSource;
+    }
+
+
     public void DamagePlayer()
     {
         target.GetComponent<FPController>().TakeHit(damageAmount);
+        PlaySplatAudio();
     }
 
     // Update is called once per frame
