@@ -5,6 +5,7 @@ using UnityEngine;
 public class FPController : MonoBehaviour
 {
     public GameObject cam;
+    public GameObject stevePrefab;
     public Transform shotDirection;
     public Animator anim;
     public AudioSource[] footsteps;
@@ -46,8 +47,18 @@ public class FPController : MonoBehaviour
     public void TakeHit(float amount)
     {
         health = (int) Mathf.Clamp(health - amount, 0, maxHealth);
-        Debug.Log("Health: " + health);
-    }
+        //Debug.Log("Health: " + health);
+        if (health <= 0)
+        {
+            Vector3 pos = new Vector3(this.transform.position.x,
+                                        Terrain.activeTerrain.SampleHeight(this.transform.position),
+                                        this.transform.position.z);
+            GameObject steve = Instantiate(stevePrefab, pos, this.transform.rotation);
+            steve.GetComponent<Animator>().SetTrigger("Death");
+            GameStats.gameOver = true;
+            Destroy(this.gameObject);
+        }
+    }                                   
 
     // Start is called before the first frame update
     void Start()

@@ -34,14 +34,13 @@ public class ZombieController : MonoBehaviour
 
     float DistanceToPlayer()
     {
+        if (GameStats.gameOver) return Mathf.Infinity;
         return Vector3.Distance(target.transform.position, this.transform.position);
     }
 
+
     bool CanSeePlayer()
     {
-        /*if (this.transform.name == "zombiegirl")
-            Debug.Log("Name = " + this.transform.name + " DistanceToPlayer = " + DistanceToPlayer());*/
-
         if (DistanceToPlayer() < 10)
             return true;
         return false;
@@ -72,40 +71,22 @@ public class ZombieController : MonoBehaviour
         spats[0] = audioSource;
     }
 
-
     public void DamagePlayer()
     {
-        target.GetComponent<FPController>().TakeHit(damageAmount);
-        PlaySplatAudio();
+        if(target != null)
+        {
+            target.GetComponent<FPController>().TakeHit(damageAmount);
+            PlaySplatAudio();
+        }
     }
-
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (Random.Range(0, 10) < 5)
-            {
-                GameObject rd = Instantiate(ragdoll, this.transform.position, this.transform.rotation);
-                rd.transform.Find("Hips").GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * 10000);
-                Destroy(this.gameObject);
-            }
-            else
-            {
-                TurnOffTriggers();
-                anim.SetBool("isDead", true);
-                state = STATE.DEAD;
-
-            }
-            return;
-        }*/
-
-        if (target == null)
+        if (target == null && GameStats.gameOver == false)
         {
             target = GameObject.FindWithTag("Player");
             return;
         }
-
         switch (state)
         {
             case STATE.IDLE:
@@ -125,14 +106,6 @@ public class ZombieController : MonoBehaviour
                     TurnOffTriggers();
                     agent.speed = walkingSpeed;
                     anim.SetBool("isWalking", true);
-
-                    /* debug
-                    if (this.transform.name == "jill")
-                    {
-                        Vector3 agentDest = agent.destination;
-                        Debug.Log("name = " + this.transform.name + " newX = " + newX + " newY = " + newY + " newZ = " + newZ);
-                        Debug.Log("name = " + this.transform.name + " agentDestX = " + agentDest.x + " agentDestY = " + agentDest.y + " agentDestZ = " + agentDest.z);
-                    }*/
                 }
                 if (CanSeePlayer()) state = STATE.CHASE;
                 else if (Random.Range(0, 5000) < 5)
@@ -143,6 +116,7 @@ public class ZombieController : MonoBehaviour
                 }
                 break;
             case STATE.CHASE:
+                if (GameStats.gameOver) { TurnOffTriggers(); state = STATE.WANDER; return; }
                 agent.SetDestination(target.transform.position);
                 agent.stoppingDistance = 5;
                 TurnOffTriggers();
@@ -162,6 +136,7 @@ public class ZombieController : MonoBehaviour
                 
                 break;
             case STATE.ATTACK:
+                if (GameStats.gameOver) { TurnOffTriggers(); state = STATE.WANDER; return; }
                 TurnOffTriggers();
                 anim.SetBool("isAttacking", true);
                 this.transform.LookAt(target.transform.position);
