@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FPController : MonoBehaviour
 {
     public GameObject cam;
     public GameObject stevePrefab;
+    public Slider healthbar;
     public Transform shotDirection;
     public Animator anim;
     public AudioSource[] footsteps;
@@ -47,7 +49,8 @@ public class FPController : MonoBehaviour
     public void TakeHit(float amount)
     {
         health = (int) Mathf.Clamp(health - amount, 0, maxHealth);
-        //Debug.Log("Health: " + health);
+        healthbar.value = health / (float)maxHealth;
+        // Debug.Log("TakeHit: Health=" + health + " healthbar.value=" + healthbar.value + " Amount=" + amount + " maxHealth=" + maxHealth);
         if (health <= 0)
         {
             Vector3 pos = new Vector3(this.transform.position.x,
@@ -83,6 +86,7 @@ public class FPController : MonoBehaviour
         characterRot = this.transform.localRotation;
 
         health = maxHealth;
+        healthbar.value = health / (float)maxHealth;
     }
 
     void ProcessZombieHit()
@@ -248,14 +252,16 @@ public class FPController : MonoBehaviour
         else if (col.gameObject.tag == "MedKit" && health < maxHealth)
         {
             health = Mathf.Clamp(health + 25, 0, maxHealth);
-            Debug.Log("MedKit: " + health);
+            healthbar.value = health / (float)maxHealth;
+            //Debug.Log("MedKit: " + health);
             Destroy(col.gameObject);
             healthPickup.Play();
         }
         else if (col.gameObject.tag == "Lava")
         {
             health = Mathf.Clamp(health - 50, 0, maxHealth);
-            Debug.Log("Health Level: " + health);
+            healthbar.value = health / (float)maxHealth;
+            //Debug.Log("Health Level: " + health);
             if (health <= 0)
                 deathSound.Play();
         }
