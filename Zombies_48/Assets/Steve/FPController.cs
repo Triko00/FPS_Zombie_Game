@@ -51,6 +51,7 @@ public class FPController : MonoBehaviour
         health = (int) Mathf.Clamp(health - amount, 0, maxHealth);
         healthbar.value = health;
         // Debug.Log("TakeHit: Health=" + health + " healthbar.value=" + healthbar.value + " Amount=" + amount + " maxHealth=" + maxHealth);
+
         if (health <= 0)
         {
             Vector3 pos = new Vector3(this.transform.position.x,

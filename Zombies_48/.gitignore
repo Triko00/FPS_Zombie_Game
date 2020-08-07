@@ -72,3 +72,7 @@ crashlytics-build.properties
 Assets/GleyPlugins/DeliveryVehiclesPack/Textures/Vehicle03_Dodge.psd
 Assets/GleyPlugins/DeliveryVehiclesPack/Textures/Vehicle02_Piaggio.psd
 Assets/GleyPlugins/DeliveryVehiclesPack/Textures/Vehicle01_Vespa.psd
+
+Assets/Zombies/**/*.fbx
+Assets/Terrain/**/*.tif
+Assets/GameLevel/NavMesh.asset
