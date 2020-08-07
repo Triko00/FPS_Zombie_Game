@@ -49,7 +49,7 @@ public class FPController : MonoBehaviour
     public void TakeHit(float amount)
     {
         health = (int) Mathf.Clamp(health - amount, 0, maxHealth);
-        healthbar.value = health / (float)maxHealth;
+        healthbar.value = health;
         // Debug.Log("TakeHit: Health=" + health + " healthbar.value=" + healthbar.value + " Amount=" + amount + " maxHealth=" + maxHealth);
         if (health <= 0)
         {
@@ -86,7 +86,7 @@ public class FPController : MonoBehaviour
         characterRot = this.transform.localRotation;
 
         health = maxHealth;
-        healthbar.value = health / (float)maxHealth;
+        healthbar.value = health;
     }
 
     void ProcessZombieHit()
@@ -252,7 +252,7 @@ public class FPController : MonoBehaviour
         else if (col.gameObject.tag == "MedKit" && health < maxHealth)
         {
             health = Mathf.Clamp(health + 25, 0, maxHealth);
-            healthbar.value = health / (float)maxHealth;
+            healthbar.value = health;
             //Debug.Log("MedKit: " + health);
             Destroy(col.gameObject);
             healthPickup.Play();
@@ -260,7 +260,7 @@ public class FPController : MonoBehaviour
         else if (col.gameObject.tag == "Lava")
         {
             health = Mathf.Clamp(health - 50, 0, maxHealth);
-            healthbar.value = health / (float)maxHealth;
+            healthbar.value = health;
             //Debug.Log("Health Level: " + health);
             if (health <= 0)
                 deathSound.Play();
