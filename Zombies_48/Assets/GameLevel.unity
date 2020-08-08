@@ -2353,8 +2353,9 @@ GameObject:
   - component: {fileID: 199303419}
   - component: {fileID: 199303421}
   - component: {fileID: 199303420}
+  - component: {fileID: 199303422}
   m_Layer: 5
-  m_Name: Radar
+  m_Name: RadarImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2417,6 +2418,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199303418}
   m_CullTransparentMesh: 0
+--- !u!114 &199303422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199303418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510ddd559e5b11d42b40cfd32bd1d8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPos: {fileID: 1196206295}
+  mapScale: 2
 --- !u!1001 &204089232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14041,6 +14056,12 @@ Transform:
 --- !u!1 &1196206278 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 676386070099139870, guid: d44249213784a4fbc953f4da089864dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 693259722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1196206295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 676386070099139940, guid: d44249213784a4fbc953f4da089864dc,
     type: 3}
   m_PrefabInstance: {fileID: 693259722}
   m_PrefabAsset: {fileID: 0}
