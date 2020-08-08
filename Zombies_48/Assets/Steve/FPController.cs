@@ -8,6 +8,8 @@ public class FPController : MonoBehaviour
     public GameObject cam;
     public GameObject stevePrefab;
     public Slider healthbar;
+    public Text ammoReserves;
+    public Text ammoClipAmount;
     public Transform shotDirection;
     public Animator anim;
     public AudioSource[] footsteps;
@@ -88,6 +90,9 @@ public class FPController : MonoBehaviour
 
         health = maxHealth;
         healthbar.value = health;
+
+        ammoReserves.text = ammo + "";
+        ammoClipAmount.text = ammoClip + "";
     }
 
     void ProcessZombieHit()
@@ -119,19 +124,21 @@ public class FPController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
             anim.SetBool("arm", !anim.GetBool("arm"));
 
-        if (Input.GetMouseButtonDown(0) && !anim.GetBool("fire"))
+        if (Input.GetMouseButtonDown(0) && !anim.GetBool("fire") && anim.GetBool("arm") && GameStats.canShoot)
         {
             if (ammoClip > 0)
             {
                 anim.SetTrigger("fire");
                 ProcessZombieHit();
                 ammoClip--;
+                ammoClipAmount.text = ammoClip + "";
+                GameStats.canShoot = false;
             }
-            else if (anim.GetBool("arm"))
+            else
                 triggerSound.Play();
 
 
-            Debug.Log("Ammo Left in Clip: " + ammoClip);
+            //Debug.Log("Ammo Left in Clip: " + ammoClip);
         }
 
         if (Input.GetKeyDown(KeyCode.R) && anim.GetBool("arm"))
@@ -142,8 +149,10 @@ public class FPController : MonoBehaviour
             int ammoAvailable = amountNeeded < ammo ? amountNeeded : ammo;
             ammo -= ammoAvailable;
             ammoClip += ammoAvailable;
-            Debug.Log("Ammo Left: " + ammo);
-            Debug.Log("Ammo in Clip: " + ammoClip);
+            ammoReserves.text = ammo + "";
+            ammoClipAmount.text = ammoClip + "";
+            /*Debug.Log("Ammo Left: " + ammo);
+            Debug.Log("Ammo in Clip: " + ammoClip);*/
         }
 
         if (Mathf.Abs(x) > 0 || Mathf.Abs(z) > 0)
@@ -245,7 +254,8 @@ public class FPController : MonoBehaviour
         if (col.gameObject.tag == "Ammo" && ammo < maxAmmo)
         {
             ammo = Mathf.Clamp(ammo + 10, 0, maxAmmo);
-            Debug.Log("Ammo: " + ammo);
+            ammoReserves.text = ammo + "";
+            //Debug.Log("Ammo: " + ammo);
             Destroy(col.gameObject);
             ammoPickup.Play();
 
