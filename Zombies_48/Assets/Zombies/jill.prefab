@@ -4430,6 +4430,7 @@ GameObject:
   - component: {fileID: 1046508030}
   - component: {fileID: 1046508029}
   - component: {fileID: 1046508028}
+  - component: {fileID: 3727494436225111292}
   m_Layer: 8
   m_Name: jill
   m_TagString: Zombie
@@ -4830,3 +4831,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3727494436225111292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153167617879130721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f306f70ff5d3b64b9862a1ee1782eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 3102302379477504934, guid: 936cacc35ac884f8bb0806cb1f2ad408, type: 3}
