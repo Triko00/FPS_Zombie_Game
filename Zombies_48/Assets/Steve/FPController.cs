@@ -22,6 +22,12 @@ public class FPController : MonoBehaviour
     public AudioSource reloadSound;
     public GameObject bloodPrefab;
 
+    public GameObject uiBloodPrefab;
+    public GameObject canvas;
+
+    float cWidth;
+    float cHeight;
+
     float speed = 0.1f;
     float Xsensitivity = 4;
     float Ysensitivity = 4;
@@ -53,7 +59,13 @@ public class FPController : MonoBehaviour
     {
         health = (int) Mathf.Clamp(health - amount, 0, maxHealth);
         healthbar.value = health;
-        // Debug.Log("TakeHit: Health=" + health + " healthbar.value=" + healthbar.value + " Amount=" + amount + " maxHealth=" + maxHealth);
+
+        GameObject bloodSplatter = Instantiate(uiBloodPrefab);
+        bloodSplatter.transform.SetParent(canvas.transform);
+        bloodSplatter.transform.position = new Vector3(Random.Range(0, cWidth), Random.Range(0, cHeight), 0);
+
+        Destroy(bloodSplatter, 2.2f);
+        
 
         if (health <= 0)
         {
@@ -94,6 +106,9 @@ public class FPController : MonoBehaviour
 
         ammoReserves.text = ammo + "";
         ammoClipAmount.text = ammoClip + "";
+
+        cWidth = canvas.GetComponent<RectTransform>().rect.width;
+        cHeight = canvas.GetComponent<RectTransform>().rect.height;
     }
 
     void ProcessZombieHit()

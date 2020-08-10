@@ -8510,6 +8510,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7340798523647320814, guid: 47c8e3f2753c0dc4cad766cd885b8ab4,
         type: 3}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 722308404}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: uiBloodPrefab
+      value: 
+      objectReference: {fileID: 739773013363001237, guid: 7b63b92cd9306084b9f347e1e4cf71c0,
+        type: 3}
     - target: {fileID: 676386070099139940, guid: d44249213784a4fbc953f4da089864dc,
         type: 3}
       propertyPath: m_LocalPosition.x
