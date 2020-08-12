@@ -145,6 +145,10 @@ public class ZombieController : MonoBehaviour
                 break;
             case STATE.DEAD:
                 Destroy(agent);
+                AudioSource[] sounds = this.GetComponents<AudioSource>();
+                foreach (AudioSource s in sounds)
+                    s.volume = 0;
+
                 this.GetComponent<Sink>().StartSink();
                 break;
         }
