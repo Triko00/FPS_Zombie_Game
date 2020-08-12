@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\GameStats.cs" />
      <Compile Include="Assets\HUD\CompassContoller.cs" />
+     <Compile Include="Assets\HUD\GameController.cs" />
      <Compile Include="Assets\HUD\MakeRadarObject.cs" />
      <Compile Include="Assets\HUD\Radar.cs" />
      <Compile Include="Assets\Sounds\RandomSound.cs" />
