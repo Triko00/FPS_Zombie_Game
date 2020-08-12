@@ -59,6 +59,7 @@
      <Compile Include="Assets\HUD\CompassContoller.cs" />
      <Compile Include="Assets\HUD\MakeRadarObject.cs" />
      <Compile Include="Assets\HUD\Radar.cs" />
+     <Compile Include="Assets\Sounds\RandomSound.cs" />
      <Compile Include="Assets\Steve\FPController.cs" />
      <Compile Include="Assets\Steve\SoundController.cs" />
      <Compile Include="Assets\Terrain\Drive.cs" />
