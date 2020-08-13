@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class FPController : MonoBehaviour
 {
@@ -326,7 +327,7 @@ public class FPController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
             cursorIsLocked = false;
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject())
             cursorIsLocked = true;
 
         if (cursorIsLocked)
