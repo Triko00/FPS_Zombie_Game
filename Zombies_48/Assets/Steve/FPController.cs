@@ -24,6 +24,7 @@ public class FPController : MonoBehaviour
     public GameObject bloodPrefab;
 
     public GameObject uiBloodPrefab;
+    public GameObject gameOverPrefab;
     public GameObject canvas;
 
     float cWidth;
@@ -91,6 +92,9 @@ public class FPController : MonoBehaviour
             steve.GetComponent<Animator>().SetTrigger("Dance");
             GameStats.gameOver = true;
             Destroy(this.gameObject);
+            GameObject gameOverText = Instantiate(gameOverPrefab);
+            gameOverText.transform.SetParent(canvas.transform);
+            gameOverText.transform.localPosition = Vector3.zero;
         }
     }
 
