@@ -9,6 +9,7 @@ TagManager:
   - Home
   - MedKit
   - Ammo
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

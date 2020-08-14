@@ -27,6 +27,10 @@ public class FPController : MonoBehaviour
     public GameObject gameOverPrefab;
     public GameObject canvas;
 
+    public int lives = 3;
+    int timesDied = 0;
+    Vector3 startPosition;
+
     float cWidth;
     float cHeight;
 
@@ -57,8 +61,12 @@ public class FPController : MonoBehaviour
     bool playingWalking = false;
     bool previouslyGrounded = true;
 
+    GameObject steve;
+
     public void TakeHit(float amount)
     {
+        if (GameStats.gameOver) return;
+
         health = (int) Mathf.Clamp(health - amount, 0, maxHealth);
         healthbar.value = health;
 
@@ -74,12 +82,33 @@ public class FPController : MonoBehaviour
             Vector3 pos = new Vector3(this.transform.position.x,
                                         Terrain.activeTerrain.SampleHeight(this.transform.position),
                                         this.transform.position.z);
-            GameObject steve = Instantiate(stevePrefab, pos, this.transform.rotation);
+            steve = Instantiate(stevePrefab, pos, this.transform.rotation);
             steve.GetComponent<Animator>().SetTrigger("Death");
             GameStats.gameOver = true;
-            Destroy(this.gameObject);
+            steve.GetComponent<AudioSource>().enabled = false;
+            timesDied++;
+            if (timesDied == lives)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                steve.GetComponent<GoToMainMenu>().enabled = false;
+                cam.SetActive(false);
+                Invoke("Respawn", 12);
+            }
         }
     }                                   
+
+    void Respawn()
+    {
+        Destroy(steve);
+        cam.SetActive(true);
+        GameStats.gameOver = false;
+        health = maxHealth;
+        healthbar.value = health;
+        this.transform.position = startPosition;
+    }
 
     void OnTriggerEnter(Collider col)
     {
@@ -96,6 +125,12 @@ public class FPController : MonoBehaviour
             gameOverText.transform.SetParent(canvas.transform);
             gameOverText.transform.localPosition = Vector3.zero;
         }
+
+        if (col.gameObject.tag == "SpawnPoint")
+        {
+            startPosition = this.transform.position;
+        }
+
     }
 
     // Start is called before the first frame update
@@ -114,6 +149,8 @@ public class FPController : MonoBehaviour
 
         cWidth = canvas.GetComponent<RectTransform>().rect.width;
         cHeight = canvas.GetComponent<RectTransform>().rect.height;
+
+        startPosition = this.transform.position;
     }
 
     void ProcessZombieHit()
