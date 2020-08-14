@@ -74,6 +74,9 @@ public class FPController : MonoBehaviour
         bloodSplatter.transform.SetParent(canvas.transform);
         bloodSplatter.transform.position = new Vector3(Random.Range(0, cWidth), Random.Range(0, cHeight), 0);
 
+        float bloodScale = Random.Range(0.3f, 1.5f);
+        bloodSplatter.transform.localScale = new Vector3(bloodScale, bloodScale, 1);
+
         Destroy(bloodSplatter, 2.2f);
         
 
