@@ -64,6 +64,7 @@
      <Compile Include="Assets\Sounds\RandomSound.cs" />
      <Compile Include="Assets\Steve\FPController.cs" />
      <Compile Include="Assets\Steve\SoundController.cs" />
+     <Compile Include="Assets\SteveModel\GoToMainMenu.cs" />
      <Compile Include="Assets\Terrain\Drive.cs" />
      <Compile Include="Assets\Zombies\Sink.cs" />
      <Compile Include="Assets\Zombies\Spawn.cs" />
