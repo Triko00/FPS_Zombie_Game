@@ -1790,6 +1790,8 @@ MonoBehaviour:
   walkingSpeed: 1
   runningSpeed: 2
   damageAmount: 5
+  shotsRequired: 1
+  shotsTaken: 0
   ragdoll: {fileID: 7670871037122326912, guid: 2fce7d2d6b2de364f88e9d7da3e42519, type: 3}
 --- !u!195 &849814238
 NavMeshAgent:
@@ -1854,7 +1856,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2250,6 +2252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 7449005412173466164}
+  sound3D: 1
   firstPlay: 0
   randomMin: 5
   randomMax: 10

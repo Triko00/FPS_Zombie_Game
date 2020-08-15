@@ -168,16 +168,21 @@ public class FPController : MonoBehaviour
                 blood.transform.LookAt(this.transform.position);
                 Destroy(blood, 0.5f);
 
-                if (Random.Range(0, 10) < 5)
+                hitZombie.GetComponent<ZombieController>().shotsTaken++;
+                if (hitZombie.GetComponent<ZombieController>().shotsTaken == hitZombie.GetComponent<ZombieController>().shotsRequired)
                 {
-                    GameObject rdPrefab = hitZombie.GetComponent<ZombieController>().ragdoll;
-                    GameObject newRD = Instantiate(rdPrefab, hitZombie.transform.position, hitZombie.transform.rotation);
-                    newRD.transform.Find("Hips").GetComponent<Rigidbody>().AddForce(shotDirection.forward * 2000);
-                    Destroy(hitZombie);
-                }
-                else
-                {
-                    hitZombie.GetComponent<ZombieController>().KillZombie();
+
+                    if (Random.Range(0, 10) < 5)
+                    {
+                        GameObject rdPrefab = hitZombie.GetComponent<ZombieController>().ragdoll;
+                        GameObject newRD = Instantiate(rdPrefab, hitZombie.transform.position, hitZombie.transform.rotation);
+                        newRD.transform.Find("Hips").GetComponent<Rigidbody>().AddForce(shotDirection.forward * 2000);
+                        Destroy(hitZombie);
+                    }
+                    else
+                    {
+                        hitZombie.GetComponent<ZombieController>().KillZombie();
+                    }
                 }
             }
         }

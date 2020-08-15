@@ -10435,6 +10435,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1196206278}
+    - target: {fileID: 1331053315, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
+      propertyPath: shotsRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1771589159, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
       propertyPath: Loop
       value: 0
@@ -12653,6 +12657,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1196206278}
+    - target: {fileID: 1549816910, guid: d5b7cf80f1fab4ea0bd49a0e878214fe, type: 3}
+      propertyPath: shotsRequired
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1099347172983380646, guid: d5b7cf80f1fab4ea0bd49a0e878214fe,
         type: 3}
       propertyPath: m_Name
@@ -15894,6 +15902,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1196206278}
+    - target: {fileID: 839711691, guid: b7dd32307aa7f43bf98270b4b8b91c33, type: 3}
+      propertyPath: shotsRequired
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1046508030, guid: b7dd32307aa7f43bf98270b4b8b91c33, type: 3}
       propertyPath: Loop
       value: 0

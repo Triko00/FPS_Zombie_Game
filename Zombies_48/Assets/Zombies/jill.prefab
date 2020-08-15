@@ -4495,6 +4495,8 @@ MonoBehaviour:
   walkingSpeed: 0.8
   runningSpeed: 1.6
   damageAmount: 15
+  shotsRequired: 2
+  shotsTaken: 0
   ragdoll: {fileID: 7296550756406769512, guid: 2203ca75e0a6743449a87fc4ace32645, type: 3}
 --- !u!195 &839711692
 NavMeshAgent:
@@ -4559,7 +4561,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4857,7 +4859,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cf55a93a7c8ed4960bbb6af3c2c0b8dd, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1.5
   Loop: 0
@@ -4955,6 +4957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 1055701818}
+  sound3D: 1
   firstPlay: 0
   randomMin: 5
   randomMax: 10
