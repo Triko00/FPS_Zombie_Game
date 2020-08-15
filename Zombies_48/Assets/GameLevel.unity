@@ -10427,10 +10427,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1303420735, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1331053315, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1196206278}
+    - target: {fileID: 1771589159, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771589159, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5643912976069227624, guid: 7912ec467aa9147a59e49b3925ad126e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12629,6 +12641,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1058362105, guid: d5b7cf80f1fab4ea0bd49a0e878214fe, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525393738, guid: d5b7cf80f1fab4ea0bd49a0e878214fe, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1549816910, guid: d5b7cf80f1fab4ea0bd49a0e878214fe, type: 3}
       propertyPath: target
       value: 
@@ -15874,6 +15894,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1196206278}
+    - target: {fileID: 1046508030, guid: b7dd32307aa7f43bf98270b4b8b91c33, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1055701818, guid: b7dd32307aa7f43bf98270b4b8b91c33, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5286606572932149362, guid: b7dd32307aa7f43bf98270b4b8b91c33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25109,6 +25137,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1196206278}
+    - target: {fileID: 1512918021, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
         type: 3}
       propertyPath: m_Name
