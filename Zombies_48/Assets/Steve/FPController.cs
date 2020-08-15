@@ -27,6 +27,11 @@ public class FPController : MonoBehaviour
     public GameObject gameOverPrefab;
     public GameObject canvas;
 
+    public CompassContoller compassC;
+    public GameObject[] checkPoints;
+    int currentCheckPoint = 0;
+    public LayerMask checkPointLayer;
+
     public int lives = 3;
     int timesDied = 0;
     Vector3 startPosition;
@@ -132,6 +137,11 @@ public class FPController : MonoBehaviour
         if (col.gameObject.tag == "SpawnPoint")
         {
             startPosition = this.transform.position;
+            if (col.gameObject == checkPoints[currentCheckPoint])
+            {
+                currentCheckPoint++;
+                compassC.target = checkPoints[currentCheckPoint];
+            }
         }
 
     }
@@ -154,12 +164,13 @@ public class FPController : MonoBehaviour
         cHeight = canvas.GetComponent<RectTransform>().rect.height;
 
         startPosition = this.transform.position;
+        compassC.target = checkPoints[0];
     }
 
     void ProcessZombieHit()
     {
         RaycastHit hitInfo;
-        if(Physics.Raycast(shotDirection.position, shotDirection.forward, out hitInfo, 200))
+        if(Physics.Raycast(shotDirection.position, shotDirection.forward, out hitInfo, 200, ~checkPointLayer))
         {
             GameObject hitZombie = hitInfo.collider.gameObject;
             if(hitZombie.tag == "Zombie")

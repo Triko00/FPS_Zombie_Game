@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0.11877005, g: 0.16037738, b: 0.12876508, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.08
+  m_FogDensity: 0.05
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 19553678}
   - component: {fileID: 19553677}
   - component: {fileID: 19553676}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (10)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 61055981}
   - component: {fileID: 61055980}
   - component: {fileID: 61055979}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -1455,7 +1455,7 @@ GameObject:
   - component: {fileID: 91224988}
   - component: {fileID: 91224987}
   - component: {fileID: 91224986}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (6)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -2005,7 +2005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 156141021}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Checkpoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3996,7 +3996,7 @@ GameObject:
   - component: {fileID: 287393361}
   - component: {fileID: 287393360}
   - component: {fileID: 287393359}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (13)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -6243,7 +6243,7 @@ GameObject:
   - component: {fileID: 500940430}
   - component: {fileID: 500940429}
   - component: {fileID: 500940428}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (5)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -7572,7 +7572,7 @@ GameObject:
   - component: {fileID: 568116174}
   - component: {fileID: 568116173}
   - component: {fileID: 568116172}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (15)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -9457,6 +9457,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
         type: 3}
+      propertyPath: checkPoints.Array.size
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
       propertyPath: shotDirection
       value: 
       objectReference: {fileID: 754195282}
@@ -9504,6 +9509,111 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7837368045548507068, guid: 11c4ba9f1aef73248a710c494e7ad636,
         type: 3}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 61055978}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1337372256}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 2042347641}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1292169642}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 500940426}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[6]
+      value: 
+      objectReference: {fileID: 91224984}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[7]
+      value: 
+      objectReference: {fileID: 2026233844}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[8]
+      value: 
+      objectReference: {fileID: 1292189846}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[9]
+      value: 
+      objectReference: {fileID: 1532352957}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[10]
+      value: 
+      objectReference: {fileID: 19553674}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[11]
+      value: 
+      objectReference: {fileID: 1570525251}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[12]
+      value: 
+      objectReference: {fileID: 816329914}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[13]
+      value: 
+      objectReference: {fileID: 287393357}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[14]
+      value: 
+      objectReference: {fileID: 886272072}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[15]
+      value: 
+      objectReference: {fileID: 568116170}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[16]
+      value: 
+      objectReference: {fileID: 1475969700}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[17]
+      value: 
+      objectReference: {fileID: 723459652}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[18]
+      value: 
+      objectReference: {fileID: 1893434093}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[19]
+      value: 
+      objectReference: {fileID: 1893434093}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: checkPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1909839399}
+    - target: {fileID: 676386070099139871, guid: d44249213784a4fbc953f4da089864dc,
+        type: 3}
+      propertyPath: compassC
+      value: 
+      objectReference: {fileID: 594995444}
     - target: {fileID: 676386070099139940, guid: d44249213784a4fbc953f4da089864dc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10427,26 +10537,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1303420735, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1331053315, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1196206278}
-    - target: {fileID: 1331053315, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
-      propertyPath: shotsRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771589159, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1771589159, guid: 7912ec467aa9147a59e49b3925ad126e, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5643912976069227624, guid: 7912ec467aa9147a59e49b3925ad126e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10626,7 +10720,7 @@ GameObject:
   - component: {fileID: 723459656}
   - component: {fileID: 723459655}
   - component: {fileID: 723459654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (17)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -12194,7 +12288,7 @@ GameObject:
   - component: {fileID: 816329918}
   - component: {fileID: 816329917}
   - component: {fileID: 816329916}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (12)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -12645,22 +12739,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1058362105, guid: d5b7cf80f1fab4ea0bd49a0e878214fe, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1525393738, guid: d5b7cf80f1fab4ea0bd49a0e878214fe, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1549816910, guid: d5b7cf80f1fab4ea0bd49a0e878214fe, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1196206278}
-    - target: {fileID: 1549816910, guid: d5b7cf80f1fab4ea0bd49a0e878214fe, type: 3}
-      propertyPath: shotsRequired
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1099347172983380646, guid: d5b7cf80f1fab4ea0bd49a0e878214fe,
         type: 3}
       propertyPath: m_Name
@@ -13129,7 +13211,7 @@ GameObject:
   - component: {fileID: 886272076}
   - component: {fileID: 886272075}
   - component: {fileID: 886272074}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (14)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -15902,18 +15984,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1196206278}
-    - target: {fileID: 839711691, guid: b7dd32307aa7f43bf98270b4b8b91c33, type: 3}
-      propertyPath: shotsRequired
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1046508030, guid: b7dd32307aa7f43bf98270b4b8b91c33, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1055701818, guid: b7dd32307aa7f43bf98270b4b8b91c33, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5286606572932149362, guid: b7dd32307aa7f43bf98270b4b8b91c33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18178,7 +18248,7 @@ GameObject:
   - component: {fileID: 1292169646}
   - component: {fileID: 1292169645}
   - component: {fileID: 1292169644}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (4)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -18271,7 +18341,7 @@ GameObject:
   - component: {fileID: 1292189850}
   - component: {fileID: 1292189849}
   - component: {fileID: 1292189848}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (8)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -18928,7 +18998,7 @@ GameObject:
   - component: {fileID: 1337372260}
   - component: {fileID: 1337372259}
   - component: {fileID: 1337372258}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -21954,7 +22024,7 @@ GameObject:
   - component: {fileID: 1475969704}
   - component: {fileID: 1475969703}
   - component: {fileID: 1475969702}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (16)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -22475,7 +22545,7 @@ GameObject:
   - component: {fileID: 1532352961}
   - component: {fileID: 1532352960}
   - component: {fileID: 1532352959}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (9)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -23482,7 +23552,7 @@ GameObject:
   - component: {fileID: 1570525255}
   - component: {fileID: 1570525254}
   - component: {fileID: 1570525253}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (11)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -25149,10 +25219,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1196206278}
-    - target: {fileID: 1512918021, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5176861845160572960, guid: 6a1d6fe89cd7e4fe486e4cabf09b8d3d,
         type: 3}
       propertyPath: m_Name
@@ -26940,7 +27006,7 @@ GameObject:
   - component: {fileID: 1909839403}
   - component: {fileID: 1909839402}
   - component: {fileID: 1909839401}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -28877,7 +28943,7 @@ GameObject:
   - component: {fileID: 2026233848}
   - component: {fileID: 2026233847}
   - component: {fileID: 2026233846}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (7)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -29357,7 +29423,7 @@ GameObject:
   - component: {fileID: 2042347645}
   - component: {fileID: 2042347644}
   - component: {fileID: 2042347643}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (3)
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
