@@ -39,4 +39,8 @@ public class AllButtons : MonoBehaviour
         music.volume = volume;
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
